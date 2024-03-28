@@ -1,0 +1,37 @@
+(async () => {
+    const Planet = require('../models/Planet');
+/*
+    const newPlanet = await Planet.create({
+        name: "Saturno",
+        position: 1,
+    });
+
+     Busca todos os planetas do banco
+    const seePlanets = await Planet.findAll(); 
+
+     Busca somente o planeta do banco que tenha este ID (Primary Key)
+    const seePlanets = await Planet.findByPk(2); 
+
+     Busca os planetas que tenham o nome 'Terra' 
+    const seePlanets = await Planet.findAll({
+        where: {
+            name: 'Terra',
+        },
+    });
+*/
+
+/*   Atualizando alguma informação de planeta
+    const updatePlanets = await Planet.findByPk(1);
+        updatePlanets.name = "Terra616";
+        await updatePlanets.save();
+*/
+
+    // Excluindo um planeta do banco
+    const deletePlanets = await Planet.findByPk(4);
+        
+    console.log(deletePlanets);
+
+    await deletePlanets.destroy();
+
+
+}) ();
